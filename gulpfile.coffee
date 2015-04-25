@@ -5,9 +5,12 @@ gutil = require('gulp-util')
 coffee = require('gulp-coffee')
 jade = require 'gulp-jade'
 ghPages = require('gulp-gh-pages')
-gulp.task 'deploy', ->
-  gulp.src('./dist/**/*').pipe ghPages()
 
+gulp.task 'deploy', ->
+  gulp.src('./dist/**/*')
+    .pipe ghPages(
+      branch: 'master'
+    )
 
 gulp.task 'build', ->
   gulp.src('./src/**/*.html').pipe gulp.dest('./dist')
@@ -20,5 +23,3 @@ gulp.task 'build', ->
     .pipe coffee bare: true
       .on 'error', gutil.log
     .pipe gulp.dest('./dist')
-
-
