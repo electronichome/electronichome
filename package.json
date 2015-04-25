@@ -1,0 +1,13 @@
+{
+  "title:": "Electronic Home",
+  "name": "electronic-home",
+  "version": "0.0.1",
+  "homepage": "http://electronichome.github.io",
+  "private": false,
+  "dependencies": {},
+  "devDependencies": {
+    "coffee-script": "^1.9.2",
+    "gulp": "^3.8.11",
+    "gulp-gh-pages": "^0.5.1"
+  }
+}
