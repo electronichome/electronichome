@@ -10,15 +10,15 @@ gulp.task 'deploy', ->
 
 
 gulp.task 'build', ->
-  gulp.src('./src/**/*.html').pipe gulp.dest('./')
+  gulp.src('./src/**/*.html').pipe gulp.dest('./dist')
 
   gulp.src './src/**/*.jade'
     .pipe jade pretty: true, locals: { web: true }
-    .pipe gulp.dest './'
+    .pipe gulp.dest './dist'
 
   gulp.src('./src/**/*.coffee')
     .pipe coffee bare: true
       .on 'error', gutil.log
-    .pipe gulp.dest('./')
+    .pipe gulp.dest('./dist')
 
 
