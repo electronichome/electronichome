@@ -7,4 +7,4 @@ gulp.task 'deploy', ->
 
 
 gulp.task 'build', ->
-  gulp.src('./src/**/*').pipe gulp.dest('./dist')
+  gulp.src('./src/**/*').pipe gulp.dest('./')
