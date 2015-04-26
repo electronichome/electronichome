@@ -1,6 +1,6 @@
 html
   head
-    // link(rel="stylesheet" type="text/gss-ast" href="gss.json")
+    link(rel="stylesheet" href="/styles/one.css")
     style(type='text/gss').
       #logoImg[height] == 400;
       #logoImg[width] == #logoImg[height] * 409/450;
@@ -14,7 +14,7 @@ html
     script(src="./test.js")
     script.
       window.engine = new GSS(document);
-  body
+  body.one
     h1 Electronic Home: Home Theater Designs and Automation
     h2 Based in Atlanta, GA
 
