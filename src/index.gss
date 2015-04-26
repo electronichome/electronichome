@@ -1,0 +1,10 @@
+#cassowaryImg[height] == 125;
+#cassowaryImg[width] == #cassowaryImg[height] * 409/450;
+#cassowaryImg[center] == ::window[center];
+
+h1[size] == h1[intrinsic-size];
+p[size] == p[intrinsic-size];
+
+@v (h1)-30-(#cassowaryImg)-20-(p);
+
+h1[center-x] == p[center-x] == #cassowaryImg[center-x];
