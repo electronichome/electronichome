@@ -13,7 +13,11 @@ reportChange = (event) ->
   console.log 'File ' + event.path + ' was ' + event.type + ', running tasks...'
 
 # Build
-gulp.task 'build', ['build-coffee', 'build-gss', 'build-jade']
+gulp.task 'build', ['build-images', 'build-coffee', 'build-gss', 'build-jade']
+
+gulp.task 'build-images', ->
+  gulp.src './src/assets/images/**'
+    .pipe gulp.dest './dist/images'
 
 gulp.task 'build-coffee', ->
   gulp.src './src/**/*.coffee'
