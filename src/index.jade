@@ -1,12 +1,25 @@
-link(rel="stylesheet" type="text/gss-ast" href="gss/gss.json")
-
 html
   head
+    // link(rel="stylesheet" type="text/gss-ast" href="gss.json")
+    style(type='text/gss').
+      #cassowaryImg[height] == 125;
+      #cassowaryImg[width] == #cassowaryImg[height] * 409/450;
+      #cassowaryImg[center] == ::window[center];
+      h1[size] == h1[intrinsic-size];
+      p[size] == p[intrinsic-size];
+      @v (h1)-30-(#cassowaryImg)-20-(p);
+      h1[center-x] == p[center-x] == #cassowaryImg[center-x];
+    script(src="https://s3-us-west-2.amazonaws.com/cdn.thegrid.io/gss/v2.0.0/v2.0.0/gss.js")  
     script(src="./test.js")
+    script.
+      window.engine = new GSS(document);
   body
     h1 Electronic Home: Home Theater Designs
     h2 Based in Atlanta, GA
+    h2 Sub Title
 
-    p We combine aesthetics with science.
+    p We combine aesthetics with science and other things.
+
+    img#cassowaryImg(src='http://gridstylesheets.org/assets/images/Intro/CassowaryBird.png')
 
     a(href="javascript:void(0)" onclick="hello()") Click Me!

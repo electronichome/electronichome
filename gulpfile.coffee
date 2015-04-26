@@ -22,7 +22,7 @@ gulp.task 'build-coffee', ->
     .pipe gulp.dest './dist'
 
 gulp.task 'build-gss', ->
-  gulp.src './src/gss/**/*.gss'
+  gulp.src './src/**/*.gss'
     .pipe gss()
     .pipe concat 'gss.json'
     .pipe gulp.dest './dist'
