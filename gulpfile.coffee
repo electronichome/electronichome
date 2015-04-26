@@ -10,7 +10,7 @@ browserSync = require 'browser-sync'
 
 # Helpers
 reportChange = (event) ->
-  console.log 'File ' + event.path + ' was ' + event.type + ', running tasks...'
+  console.log "File '#{event.path}' was '#{event.type}' running tasks..."
 
 # Build
 gulp.task 'build', ['build-coffee', 'build-gss', 'build-jade']
@@ -55,5 +55,4 @@ gulp.task 'serve', ['build'], (done) ->
 # Deploy
 gulp.task 'deploy', ->
   gulp.src './dist/**'
-    .pipe ghPages
-      branch: 'master'
+    .pipe ghPages branch: 'master'
