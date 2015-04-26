@@ -5,13 +5,10 @@ gutil = require('gulp-util')
 coffee = require('gulp-coffee')
 jade = require 'gulp-jade'
 ghPages = require('gulp-gh-pages')
-browser-sync = require('browser-sync')
-paths = 
-  
+browser = require('browser-sync')
+gss = require('gulp-gss')
+concat = require('gulp-concat')
 
-reportChange = (event) ->
-  console.log 'File ' + event.path + ' was ' + event.type + ', running tasks...'
-  return
 
 gulp.task 'deploy', ->
   gulp.src('./dist/**/*')
@@ -20,6 +17,7 @@ gulp.task 'deploy', ->
     )
 
 gulp.task 'build', ->
+  gulp.src('./src/gss/**/*.gss').pipe(gss()).pipe(concat('gss.json')).pipe gulp.dest('./dist/gss')
   gulp.src('./src/**/*.html').pipe gulp.dest('./dist')
 
   gulp.src './src/**/*.jade'
@@ -30,15 +28,3 @@ gulp.task 'build', ->
     .pipe coffee bare: true
       .on 'error', gutil.log
     .pipe gulp.dest('./dist')
-
-gulp.task 'watch', [ 'serve' ], ->
-  gulp.watch(paths.source, [
-    'build-system'
-    browserSync.reload
-  ]).on 'change', reportChange
-  gulp.watch(paths.html, [
-    'build-html'
-    browserSync.reload
-  ]).on 'change', reportChange
-  gulp.watch(paths.style, browserSync.reload).on 'change', reportChange
-  return

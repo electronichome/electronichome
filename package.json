@@ -12,6 +12,8 @@
     "gulp-gh-pages": "^0.5.1",
     "gulp-jade": "^1.0.0",
     "gulp-util": "^3.0.4",
+    "gulp-gss": "johnetrent/gulp-gss",
+    "gulp-concat": "wearefractal/gulp-concat",
     "jade": "^1.9.2",
     "browser-sync": "^2.6.5"
   }
