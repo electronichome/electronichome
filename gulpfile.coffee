@@ -16,7 +16,7 @@ reportChange = (event) ->
 gulp.task 'build', ['build-coffee', 'build-gss', 'build-jade']
 
 gulp.task 'build-coffee', ->
-  gulp.src('./src/**/*.coffee')
+  gulp.src './src/**/*.coffee'
     .pipe coffee bare: true
       .on 'error', gutil.log
     .pipe gulp.dest './dist'
