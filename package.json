@@ -6,16 +6,16 @@
   "private": true,
   "dependencies": {},
   "devDependencies": {
+    "browser-sync": "^2.6.5",
     "coffee-script": "^1.9.2",
     "gulp": "^3.8.11",
     "gulp-coffee": "^2.3.1",
-    "gulp-gh-pages": "^0.5.1",
-    "gulp-jade": "^1.0.0",
-    "gulp-util": "^3.0.4",
-    "gulp-gss": "johnetrent/gulp-gss",
     "gulp-concat": "wearefractal/gulp-concat",
+    "gulp-gh-pages": "^0.5.1",
+    "gulp-gss": "johnetrent/gulp-gss",
+    "gulp-jade": "^1.0.0",
     "gulp-stylus": "stevelacy/gulp-stylus",
+    "gulp-util": "^3.0.4",
     "jade": "^1.9.2",
-    "browser-sync": "^2.6.5"
   }
 }
