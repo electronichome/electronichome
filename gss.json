@@ -1,0 +1,234 @@
+[
+  {
+    "type": "constraint",
+    "cssText": "#cassowaryImg[height] == 125;",
+    "commands": [
+      [
+        "==",
+        [
+          "get",
+          [
+            "#",
+            "cassowaryImg"
+          ],
+          "height"
+        ],
+        125
+      ]
+    ]
+  },
+  {
+    "type": "constraint",
+    "cssText": "#cassowaryImg[width] == #cassowaryImg[height] * 409/450;",
+    "commands": [
+      [
+        "==",
+        [
+          "get",
+          [
+            "#",
+            "cassowaryImg"
+          ],
+          "width"
+        ],
+        [
+          "/",
+          [
+            "*",
+            [
+              "get",
+              [
+                "#",
+                "cassowaryImg"
+              ],
+              "height"
+            ],
+            409
+          ],
+          450
+        ]
+      ]
+    ]
+  },
+  {
+    "type": "constraint",
+    "cssText": "#cassowaryImg[center] == ::window[center];",
+    "commands": [
+      [
+        "==",
+        [
+          "get",
+          [
+            "#",
+            "cassowaryImg"
+          ],
+          "center-x"
+        ],
+        [
+          "get",
+          [
+            "::window"
+          ],
+          "center-x"
+        ]
+      ],
+      [
+        "==",
+        [
+          "get",
+          [
+            "#",
+            "cassowaryImg"
+          ],
+          "center-y"
+        ],
+        [
+          "get",
+          [
+            "::window"
+          ],
+          "center-y"
+        ]
+      ]
+    ]
+  },
+  {
+    "type": "constraint",
+    "cssText": "h1[size] == h1[intrinsic-size];",
+    "commands": [
+      [
+        "==",
+        [
+          "get",
+          [
+            "tag",
+            "h1"
+          ],
+          "width"
+        ],
+        [
+          "get",
+          [
+            "tag",
+            "h1"
+          ],
+          "intrinsic-width"
+        ]
+      ],
+      [
+        "==",
+        [
+          "get",
+          [
+            "tag",
+            "h1"
+          ],
+          "height"
+        ],
+        [
+          "get",
+          [
+            "tag",
+            "h1"
+          ],
+          "intrinsic-height"
+        ]
+      ]
+    ]
+  },
+  {
+    "type": "constraint",
+    "cssText": "p[size] == p[intrinsic-size];",
+    "commands": [
+      [
+        "==",
+        [
+          "get",
+          [
+            "tag",
+            "p"
+          ],
+          "width"
+        ],
+        [
+          "get",
+          [
+            "tag",
+            "p"
+          ],
+          "intrinsic-width"
+        ]
+      ],
+      [
+        "==",
+        [
+          "get",
+          [
+            "tag",
+            "p"
+          ],
+          "height"
+        ],
+        [
+          "get",
+          [
+            "tag",
+            "p"
+          ],
+          "intrinsic-height"
+        ]
+      ]
+    ]
+  },
+  {
+    "type": "directive",
+    "name": "v",
+    "terms": "(h1)-30-(#cassowaryImg)-20-(p)",
+    "selectors": [],
+    "commands": []
+  },
+  {
+    "type": "constraint",
+    "cssText": "h1[center-x] == p[center-x] == #cassowaryImg[center-x];",
+    "commands": [
+      [
+        "==",
+        [
+          "get",
+          [
+            "tag",
+            "h1"
+          ],
+          "center-x"
+        ],
+        [
+          "get",
+          [
+            "tag",
+            "p"
+          ],
+          "center-x"
+        ]
+      ],
+      [
+        "==",
+        [
+          "get",
+          [
+            "tag",
+            "p"
+          ],
+          "center-x"
+        ],
+        [
+          "get",
+          [
+            "#",
+            "cassowaryImg"
+          ],
+          "center-x"
+        ]
+      ]
+    ]
+  }
+]
