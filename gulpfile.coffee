@@ -14,11 +14,7 @@ reportChange = (event) ->
   console.log 'File ' + event.path + ' was ' + event.type + ', running tasks...'
 
 # Build
-gulp.task 'build', ['build-images', 'build-js', 'build-css', 'build-stylus', 'build-coffee', 'build-gss', 'build-jade']
-
-gulp.task 'build-js', ->
-  gulp.src './src/assets/scripts/js/**'
-    .pipe gulp.dest './dist'
+gulp.task 'build', ['build-images', 'build-css', 'build-stylus', 'build-coffee', 'build-gss', 'build-jade']
 
 gulp.task 'build-images', ->
   gulp.src './src/assets/images/**'
@@ -37,13 +33,13 @@ gulp.task 'build-coffee', ->
   gulp.src './src/assets/scripts/coffee/**'
     .pipe coffee bare: true
       .on 'error', gutil.log
-    .pipe gulp.dest './dist'
+    .pipe gulp.dest './dist/scripts'
 
 gulp.task 'build-gss', ->
   gulp.src './src/**/*.gss'
     .pipe gss()
     .pipe concat 'gss.json'
-    .pipe gulp.dest './dist'
+    .pipe gulp.dest './dist/styles'
 
 gulp.task 'build-jade', ->
   gulp.src './src/**/*.jade'

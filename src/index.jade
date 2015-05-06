@@ -1,8 +1,12 @@
 html
   head
-    link(rel='stylesheet', href='/styles/foundation.css')
-    link(rel='stylesheet', href='/styles/scott.css')
     title Electronic Home
+
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/css/normalize.min.css')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/css/foundation.min.css')
+    link(rel='stylesheet', href='/styles/scott.css')
+
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js')
 
   header#hero-home.hero
     .row
@@ -11,7 +15,7 @@ html
           #logo3d
             img(src='/images/logo-3d.svg', width='400', height='200', alt='Electronic Home')
           #headline
-            h1 Home Cinema Experts
+            h1 Home Theater Experts
             a(href='#', text='Contact')
 
   include _topbar.jade
@@ -19,15 +23,14 @@ html
   .odd
     .row
       .columns
-        #scott
-          #odd
-            h2 We Combine Aesthetics with Science
-            p Our home theaters look amazing while conforming to correct acoustic principles.
-            p Our home control systems simplify your life, add convenience and security and can help you save on your utility bills! We offer all levels of home control systems that are fun for tech heads but easy for kids to use adeptly.
-            p We also offer Enterprise Level Home Networking, motorized shades and drapes and have recently added alternate energy solutions that can curb your utility bills!
+        h2 We Combine Aesthetics with Science
+    .row
+      .columns.large-4
+        img(src='/images/theater-azure.png')
+      .columns.large-4
+        img(src='/images/control-gold.png')
+      .columns.large-4
 
-            p Simply put, we sell quality products, install them properly, and maintain them. Equally important is that we have been doing this for over 23 years and take steps to protect your investment should things change.
-            
   .even
     .row
       .columns.medium-6
