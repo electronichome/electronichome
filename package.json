@@ -16,6 +16,6 @@
     "gulp-jade": "^1.0.0",
     "gulp-stylus": "stevelacy/gulp-stylus",
     "gulp-util": "^3.0.4",
-    "jade": "^1.9.2",
+    "jade": "^1.9.2"
   }
 }
