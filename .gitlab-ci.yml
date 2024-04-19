@@ -1,0 +1,25 @@
+image: ruby:2.3
+stages:
+  - deploy
+  - notify
+
+surge:
+  stage: deploy
+  script:
+    - ruby -v
+    - gem install bundler
+    - ./generate-gemfile
+    - bundle install --jobs 4 --path vendor
+    - rm -rf public
+    - bundle exec middleman build --verbose
+    - echo "Deploying..."
+    - tar -czf public.tar.gz public/.
+    - bash ./scripts/surge-deploy.sh
+  only:
+    - master
+
+notify_job:
+  stage: notify
+  script:
+    - bash ./scripts/notify-on-failure.sh
+  when: on_failure

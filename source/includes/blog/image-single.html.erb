@@ -1,0 +1,8 @@
+<% if post.data.image_title %>
+  <div class="image-title blog-image" style="background-image: url(<%= post.data.image_title %>);">
+    <div class="color-bg">
+    </div>
+  </div>
+<% else %>
+  <div class="post-thumbnail" style="background-image: url(<%= '/posts/'+post.date.to_time.strftime('%Y-%m-%d')+'-'+post.title.downcase.tr(" ", "-")+'.png' %>)"></div>
+<% end %>

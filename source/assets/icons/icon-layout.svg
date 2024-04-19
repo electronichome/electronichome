@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke: #203854;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-1 {
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <title>icon-layout</title>
+  <g id="Layout">
+    <path class="cls-1" d="M27,4H2A1,1,0,0,0,1,5V30a1,1,0,0,0,1,1H27"/>
+    <path class="cls-1" d="M27,31a4,4,0,0,0,.83-7.91,1,1,0,0,1-.83-1V1a4,4,0,0,1,4,4V27"/>
+    <line class="cls-2" x1="4.5" y1="12.5" x2="27" y2="12.5"/>
+    <line class="cls-2" x1="4.5" y1="17.5" x2="27" y2="17.5"/>
+    <line class="cls-2" x1="4.5" y1="22.5" x2="27" y2="22.5"/>
+    <line class="cls-2" x1="10.75" y1="28.75" x2="10.75" y2="6.25"/>
+    <line class="cls-2" x1="15.75" y1="28.75" x2="15.75" y2="6.25"/>
+    <line class="cls-2" x1="20.75" y1="28.75" x2="20.75" y2="6.25"/>
+    <line class="cls-2" x1="15.75" y1="17.5" x2="12.75" y2="17.5"/>
+  </g>
+</svg>

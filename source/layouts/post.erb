@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%= partial "includes/layout/head" %>
+  </head>
+  <body>
+    <%= partial "includes/layout/nav" %>
+    <div id="blog-post">
+      <div class="container md-blog-padding">
+        <div class="full-post">
+          <div class="blog-entry">
+            <div class="m-b-2">
+              <h1><%= current_article.data.title %></h1>
+              <time class="post-date medGray">
+                <% if is_blog_article? %>
+                  <%= current_article.date.to_time.strftime '%b %e, %Y' %>
+                <% end %>
+              </time>
+              <span class="by-line medGray">
+                by <span class="post-author"><%= current_article.data.author %></span>
+              </span><br>
+            </div>
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="post post-thumbnail">
+                  <%= partial "includes/blog/image-single", locals: {post: current_page} %>
+                </div>
+                <div>
+                  <%= yield %>
+                </div>
+              </div>
+            </div> <!-- row -->
+            <!-- %p
+            -->
+            <!--   &rarr;
+            -->
+            <!--   %a{href: "/blog/archives.html"}
+            -->
+            <!--     Browse all posts
+            -->
+          </div><!-- blog entry -->
+        </div> <!-- full post -->
+      </div> <!-- md-blog-padding -->
+    </div> <!-- blog post -->
+    <%= partial "includes/layout/footer" %>
+  </body>
+</html>

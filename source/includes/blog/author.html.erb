@@ -1,0 +1,9 @@
+<% if post.data.author_twitter %>
+  <span class="author">
+    <%= link_to(post.data.author, "https://twitter.com/#{post.data.author_twitter}") %>
+  </span>
+<% else %>
+  <div class="author">
+    <%= post.data.author %>
+  </div>
+<% end %>

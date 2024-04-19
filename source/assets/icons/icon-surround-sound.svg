@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #203854;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #203854;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <title>icon-surround-sound</title>
+  <g id="Surround">
+    <path class="cls-1" d="M16,9a7,7,0,1,1-7,7,7,7,0,0,1,7-7m0-1a8,8,0,1,0,8,8,8,8,0,0,0-8-8Z"/>
+    <path class="cls-2" d="M26.61,5.39a15,15,0,0,1,0,21.21"/>
+    <path class="cls-2" d="M5.39,26.61a15,15,0,0,1,0-21.21"/>
+  </g>
+</svg>

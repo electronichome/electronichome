@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #203854;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #203854;
+        stroke-miterlimit: 10;
+      }
+    </style>
+  </defs>
+  <title>icon-conditioner</title>
+  <g id="Conditioner">
+    <path class="cls-1" d="M30,2V14H2V2H30m0-2H2A2,2,0,0,0,0,2V14a2,2,0,0,0,2,2H30a2,2,0,0,0,2-2V2a2,2,0,0,0-2-2Z"/>
+    <line class="cls-2" y1="9.5" x2="32" y2="9.5"/>
+    <line class="cls-2" x1="12" y1="12" x2="20" y2="12"/>
+    <g>
+      <path class="cls-2" d="M6.22,19a3.18,3.18,0,0,0,0,5h0a3.18,3.18,0,0,1,0,5"/>
+      <path class="cls-2" d="M12.74,19a3.18,3.18,0,0,0,0,5h0a3.18,3.18,0,0,1,0,5"/>
+      <path class="cls-2" d="M19.26,19a3.18,3.18,0,0,0,0,5h0a3.18,3.18,0,0,1,0,5"/>
+      <path class="cls-2" d="M25.78,19a3.18,3.18,0,0,0,0,5h0a3.18,3.18,0,0,1,0,5"/>
+    </g>
+  </g>
+</svg>

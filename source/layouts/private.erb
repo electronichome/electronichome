@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%= partial "includes/layout/head" %>
+  </head>
+  <body>
+    <%= partial "includes/layout/nav" %>
+    <section id="proposal">
+      <div class="container">
+        <div class="col-sm-12">
+          <div class="row">
+            <img class="letterhead" src="/assets/letterhead.svg"/>
+          </div>
+          <%= yield %>
+        </div>
+      </div>
+    </section>
+    <%= partial "includes/layout/footer" %>
+  </body>
+</html>

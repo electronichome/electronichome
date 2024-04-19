@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="431.618" height="160.372" viewBox="0 0 431.618 160.372">
+  <g id="Group_5" data-name="Group 5" transform="translate(-166 -592)">
+    <g id="Path_56" data-name="Path 56" transform="translate(166 592)" fill="#a5a5af">
+      <path d="M 390.4453735351562 159.8719940185547 L 0.4999935626983643 159.8719940185547 L 0.4999935626983643 0.49998939037323 L 431.118408203125 0.49998939037323 L 431.118408203125 118.542724609375 L 390.4453735351562 159.8719940185547 Z" stroke="none"/>
+      <path d="M 0.999969482421875 0.9999847412109375 L 0.999969482421875 159.3719940185547 L 390.2359008789062 159.3719940185547 L 430.6184387207031 118.3380126953125 L 430.6184387207031 0.9999847412109375 L 0.999969482421875 0.9999847412109375 M -3.0517578125e-05 -1.52587890625e-05 L 431.6184387207031 -1.52587890625e-05 L 431.6184387207031 118.7475433349609 L 390.6548156738281 160.3719940185547 L -3.0517578125e-05 160.3719940185547 L -3.0517578125e-05 -1.52587890625e-05 Z" stroke="none" fill="#a5a5af"/>
+    </g>
+    <text id="Environmental" transform="translate(192 662)" fill="#fff" font-size="63" font-family="HelveticaNeue, Helvetica Neue" letter-spacing="-0.037em"><tspan x="0" y="0">Environmental</tspan></text>
+    <text id="Li_hts" data-name="Li  hts" transform="translate(192 723)" fill="#fff" font-size="63" font-family="HelveticaNeue, Helvetica Neue" letter-spacing="-0.023em"><tspan x="0" y="0" xml:space="preserve">Li  hts</tspan></text>
+    <text id="g_" data-name="g " transform="translate(239 720)" fill="#fff" font-size="62" font-family="Georgia" letter-spacing="-0.023em"><tspan x="0" y="0">g </tspan></text>
+    <text id="TM" transform="translate(356 687)" fill="#fff" font-size="10" font-family="Helvetica" letter-spacing="-0.023em"><tspan x="0" y="0">TM</tspan></text>
+  </g>
+</svg>

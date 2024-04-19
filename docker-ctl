@@ -1,0 +1,61 @@
+#!/usr/bin/env bash
+set -euo pipefail
+IFS=$'\n\t'
+
+HAS_DOCKER=`which docker 2>&1 >/dev/null`
+
+if [[ ! $? ]]; then
+  echo "You must install docker!"
+  exit 1
+fi
+
+
+
+HELP_MSG='\n
+You must specify an option: build, init, start, stop, clean, clean-image. \n
+\n
+Basic steps: \n
+./docker-ctl build \n
+./docker-ctl init \n'
+
+OPT=${1:-__NULL__}
+ARG=${2:-__NULL__}
+
+case ${OPT} in
+  magic )
+    # TODO: Get the magic option working.
+    echo "I'm working on it..."
+    exit 0
+    ;;
+  build )
+    docker build -t electronic-home .
+    exit 0
+    ;;
+  init )
+    docker run --name electronic-home-instance -p 4567:4567 -v ${PWD}:/root/project -a STDOUT -a STDERR electronic-home bash -c "bundle install && middleman server" &
+    exit 0
+    ;;
+  start )
+    docker start electronic-home-instance
+    ;;
+  stop )
+    docker kill electronic-home-instance
+    exit 0
+    ;;
+  clean )
+    docker rm electronic-home-instance
+    exit 0
+    ;;
+  clean-image )
+    docker rmi electronic-home
+    exit 0
+    ;;
+  __NULL__ )
+    echo -e ${HELP_MSG}
+    exit 2
+    ;;
+  * )
+    echo -e ${HELP_MSG}
+    exit 2
+    ;;
+esac

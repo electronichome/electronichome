@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #203854;
+      }
+    </style>
+  </defs>
+  <title>icon-video</title>
+  <g id="Layer_4" data-name="Layer 4">
+    <path class="cls-1" d="M30,6V26H2V6H30m0-2H2A2,2,0,0,0,0,6V26a2,2,0,0,0,2,2H30a2,2,0,0,0,2-2V6a2,2,0,0,0-2-2Z"/>
+    <path class="cls-1" d="M28,8V24H4V8H28m1-1H3V25H29V7Z"/>
+    <polygon class="cls-1" points="13 20 13 12 21 16 13 20"/>
+  </g>
+</svg>

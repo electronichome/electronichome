@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #203854;
+      }
+    </style>
+  </defs>
+  <title>icon-acoustic</title>
+  <g id="Acoustic">
+    <path class="cls-1" d="M30,2V30H2V2H30m0-2H2A2,2,0,0,0,0,2V30a2,2,0,0,0,2,2H30a2,2,0,0,0,2-2V2a2,2,0,0,0-2-2Z"/>
+    <rect class="cls-1" x="4" y="18" width="12" height="1"/>
+    <rect class="cls-1" x="4" y="21" width="12" height="1"/>
+    <rect class="cls-1" x="4" y="24" width="12" height="1"/>
+    <rect class="cls-1" x="4" y="27" width="12" height="1"/>
+    <rect class="cls-1" x="13" y="4" width="1" height="12"/>
+    <rect class="cls-1" x="10" y="4" width="1" height="12"/>
+    <rect class="cls-1" x="7" y="4" width="1" height="12"/>
+    <rect class="cls-1" x="4" y="4" width="1" height="12"/>
+    <rect class="cls-1" x="16" y="13" width="12" height="1"/>
+    <rect class="cls-1" x="16" y="10" width="12" height="1"/>
+    <rect class="cls-1" x="16" y="7" width="12" height="1"/>
+    <rect class="cls-1" x="16" y="4" width="12" height="1"/>
+    <rect class="cls-1" x="18" y="16" width="1" height="12"/>
+    <rect class="cls-1" x="21" y="16" width="1" height="12"/>
+    <rect class="cls-1" x="24" y="16" width="1" height="12"/>
+    <rect class="cls-1" x="27" y="16" width="1" height="12"/>
+  </g>
+</svg>

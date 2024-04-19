@@ -1,0 +1,37 @@
+#!/usr/bin/env zsh
+set -euo pipefail
+IFS=$'\n\t'
+
+echo "Generating Gemfile..."
+echo "A GitLab token can be generated here: https://gitlab.com/profile/personal_access_tokens"
+
+GITLAB_USERNAME=${GITLAB_PIPELINE_USERNAME:-""}
+GITLAB_AUTH_TOKEN=${GITLAB_PIPELINE_AUTH_TOKEN:-""}
+
+if [ -z "${GITLAB_USERNAME}" ]; then
+  echo -n "Please enter your GitLab username: "
+  read USERNAME_ANSWER
+
+  if [ ! -z "${USERNAME_ANSWER}" ]; then
+    GITLAB_USERNAME="$USERNAME_ANSWER"
+  else
+    echo "You must specify a username!"
+    exit 1
+  fi
+fi
+
+if [ -z "${GITLAB_AUTH_TOKEN}" ]; then
+  echo -n "Please enter your GitLab auth token: "
+  read AUTH_TOKEN_ANSWER
+  if [ ! -z "${AUTH_TOKEN_ANSWER}" ]; then
+    GITLAB_AUTH_TOKEN="$AUTH_TOKEN_ANSWER"
+  else
+    echo "You must specify an auth token!"
+    exit 1
+  fi
+fi
+
+sed \
+  -e "s/\${GITLAB_USERNAME}/$GITLAB_USERNAME/g" \
+  -e "s/\${GITLAB_AUTH_TOKEN}/$GITLAB_AUTH_TOKEN/g" \
+  Gemfile.template > Gemfile

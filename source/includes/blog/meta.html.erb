@@ -1,0 +1,6 @@
+<h4 class="meta date">
+  <%= partial "includes/blog/author", locals: {post: post} %>
+  <% if post.date %>
+    <%= post.date.to_time.strftime '%b %e, %Y' %>
+  <% end %>
+</h4>

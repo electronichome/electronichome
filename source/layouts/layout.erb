@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<%= partial "includes/layout/head" %>
+</head>
+<body>
+<%= partial "includes/layout/drawer" %>
+<div class="layout">
+  <%= partial "includes/layout/header" %>
+  <%= yield %>
+  <%= partial "includes/layout/footer" %>
+</div>
+<script type="text/javascript" src="/assets/js/nav-hide.js"></script>
+<script type="text/javascript" src="/assets/js/offcanvas.js"></script>
+<script src="https://use.fontawesome.com/775cf82f18.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+<script type="text/javascript" src="/assets/js/slick-init.js"></script>
+<script type="text/javascript">
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 80) {
+      $('.header').addClass('header-bg');
+    }
+    if (window.scrollY === 0) {
+      $('.header').removeClass('header-bg');
+    }
+  })
+</script>
+</body>
+</html>
