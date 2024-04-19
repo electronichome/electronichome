@@ -18,6 +18,9 @@ gem "middleman-minify-html"
 gem "middleman-autoprefixer"
 gem "middleman-syntax"
 
+# Fix for https://github.com/middleman/middleman/issues/2569
+gem 'haml', '~> 5.0'
+
 gem 'kramdown', '~> 1.10'
 gem 'nokogiri'
 # NOTE: GitLab CI Error: ExecJS::RubyRacerRuntime is not supported. Please replace therubyracer with mini_racer in your Gemfile or use Node.js as ExecJS runtime.
