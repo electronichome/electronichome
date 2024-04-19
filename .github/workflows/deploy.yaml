@@ -33,9 +33,15 @@ jobs:
         ruby-version: ${{ matrix.ruby-version }}
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
     - run: bash ./generate-gemfile
+      env:
+        GITLAB_USERNAME: ${{ secrets.GITLAB_USERNAME }}
+        GITLAB_AUTH_TOKEN: ${{ secrets.GITLAB_AUTH_TOKEN }}
     - run: bundle install --jobs 4 --path vendor
     - run: rm -rf public
     - run: bundle exec middleman build --verbose
     - run: echo 'Deploying...'
     - run: tar -czf public.tar.gz public/.
     - run: bash ./scripts/surge-deploy.sh
+      env:
+        SURGE_URLS: ${{ secrets.SURGE_URLS }}
+        SURGE_BASIC_AUTH: ${{ secrets.SURGE_BASIC_AUTH }}
