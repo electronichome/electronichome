@@ -19,7 +19,9 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        ruby-version: ['2.3']
+        ruby-version: ['2.5.3']
+        ruby-gems: '2.7.2'
+        bundler: '2.0.1'
     steps:
     - uses: actions/checkout@v3
     - name: Set up Ruby
@@ -28,8 +30,10 @@ jobs:
     # uses: ruby/setup-ruby@v1
       uses: ruby/setup-ruby@55283cc23133118229fd3f97f9336ee23a179fcf # v1.146.0
       with:
+        bundler: ${{ matrix.bundle }}
+        ruby-gems: ${{ matrix.rubygems-version }}
         ruby-version: ${{ matrix.ruby-version }}
-        bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+        bundler-cache: false
     - run: bash ./generate-gemfile
       env:
         GITLAB_PIPELINE_USERNAME: ${{ secrets.GITLAB_PIPELINE_USERNAME }}
