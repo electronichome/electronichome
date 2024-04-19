@@ -15,13 +15,11 @@ permissions:
   contents: read
 
 jobs:
-  test:
-
+  deploy:
     runs-on: ubuntu-latest
     strategy:
       matrix:
         ruby-version: ['2.3']
-
     steps:
     - uses: actions/checkout@v3
     - name: Set up Ruby
@@ -34,8 +32,8 @@ jobs:
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
     - run: bash ./generate-gemfile
       env:
-        GITLAB_USERNAME: ${{ secrets.GITLAB_USERNAME }}
-        GITLAB_AUTH_TOKEN: ${{ secrets.GITLAB_AUTH_TOKEN }}
+        GITLAB_PIPELINE_USERNAME: ${{ secrets.GITLAB_PIPELINE_USERNAME }}
+        GITLAB_PIPELINE_AUTH_TOKEN: ${{ secrets.GITLAB_PIPELINE_AUTH_TOKEN }}
     - run: bundle install --jobs 4 --path vendor
     - run: rm -rf public
     - run: bundle exec middleman build --verbose
